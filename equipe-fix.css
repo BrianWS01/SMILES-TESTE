@@ -1,0 +1,95 @@
+/* ============================================
+   CARROSSEL EQUIPE - FIX FINAL (SEM CARD SOBREPOSTO)
+   ============================================ */
+
+.equipe {
+    background-color: #325142 !important;
+    padding: 80px 0 !important;
+}
+
+/* Card Principal: Corpo único branco */
+.equipe-card {
+    position: relative !important;
+    flex: 0 0 320px !important;
+    width: 320px !important;
+    height: 520px !important;
+    background: #ffffff !important;
+    border-radius: 50px !important;
+    border: 2px solid #bef264 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.equipe-card:hover {
+    transform: translateY(-10px) !important;
+}
+
+/* Imagem no topo do card */
+.equipe-card-img {
+    position: relative !important;
+    width: 100% !important;
+    height: 350px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+}
+
+.equipe-card-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* Área de Informação: Abaixo da imagem, integrada ao fundo branco */
+.equipe-card-info {
+    /* RESET ABSOLUTE - Importante para remover o efeito de "card dentro de card" */
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+
+    /* Remover qualquer estilo de vidro ou card flutuante */
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.equipe-card-info h3 {
+    margin: 0 0 8px 0 !important;
+    font-size: 1.4rem !important;
+    color: #166534 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+.equipe-card-info span {
+    display: block !important;
+    font-size: 1rem !important;
+    color: #888888 !important;
+    font-weight: 400 !important;
+    text-shadow: none !important;
+    text-transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Ajustes de Carousel */
+.equipe-carousel {
+    display: flex !important;
+    gap: 30px !important;
+}

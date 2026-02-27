@@ -51,9 +51,9 @@ main {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 /* Header & Navigation */
@@ -73,12 +73,12 @@ header {
 
 .navbar {
     width: calc(100% - 40px);
-    max-width: 1403px;
-    margin: 20px auto;
-    height: 112px;
+    max-width: 1400px;
+    margin: 15px auto;
+    height: 90px;
     position: relative;
     background: white;
-    border-radius: 33px;
+    border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -88,15 +88,15 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding: 0 60px;
+    padding: 0 30px;
     position: relative;
     width: 100%;
 }
 
 .logo-section {
     position: relative;
-    width: 180px;
-    height: 112px;
+    width: 160px;
+    height: 90px;
     margin-left: 0;
     z-index: 5;
     display: flex;
@@ -124,8 +124,8 @@ header {
 
 .logo-img {
     width: auto;
-    height: 100px;
-    max-width: 180px;
+    height: 80px;
+    max-width: 160px;
     position: relative;
     z-index: 10;
     object-fit: contain;
@@ -137,7 +137,7 @@ header {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -186,10 +186,10 @@ header {
 }
 
 .cta-button-nav {
-    width: 320px;
-    height: 64px;
+    width: 260px;
+    height: 54px;
     background: rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
+    border-radius: 16px;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     position: relative;
@@ -209,12 +209,12 @@ header {
 .cta-button-nav::before {
     content: '';
     position: absolute;
-    left: 12px;
-    top: 9px;
-    width: calc(100% - 24px);
-    height: 44px;
+    left: 8px;
+    top: 6px;
+    width: calc(100% - 16px);
+    height: 40px;
     background: #166534;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 0.6px solid rgba(22, 101, 52, 0.9);
     z-index: 1;
 }
@@ -226,7 +226,7 @@ header {
     top: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     font-family: 'Host Grotesk', sans-serif;
     line-height: 1;
@@ -387,7 +387,7 @@ header {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 160px 20px 80px;
+    padding: 120px 20px 60px;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -440,7 +440,7 @@ header {
 
 .hero-title-lime {
     color: #bef264;
-    font-size: 5rem;
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 500;
     font-family: 'Host Grotesk', sans-serif;
     line-height: 1.1;
@@ -448,7 +448,7 @@ header {
 
 .hero-title-white {
     color: white;
-    font-size: 5rem;
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 400;
     font-family: 'Host Grotesk', sans-serif;
     line-height: 1.1;
@@ -726,12 +726,11 @@ section h2 {
 .proposito-content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
-    padding-left: 60px;
+    gap: 40px;
 }
 
 .proposito-text-left {

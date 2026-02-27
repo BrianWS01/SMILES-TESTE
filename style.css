@@ -20,10 +20,10 @@ html {
     }
 }
 
-/* Global scale for Mobile/Tablet */
+/* Global scale for Mobile/Tablet - Reverted to 100% */
 @media (max-width: 1023px) {
     html {
-        zoom: 0.9;
+        zoom: 1;
     }
 }
 
@@ -4271,6 +4271,39 @@ section h2 {
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
     background: #20bd5a;
+}
+
+/* Specific Hero Spacing Refinements for Mobile */
+@media (max-width: 1023px) {
+    .hero-text-centered {
+        gap: 0.5rem !important;
+    }
+
+    .hero-title {
+        margin-top: 0.2rem !important;
+    }
+
+    .hero-description {
+        margin-top: 0.1rem !important;
+    }
+
+    .hero-mt-sm {
+        margin-top: 0.2rem !important;
+    }
+
+    .hero-title-lime,
+    .hero-title-white {
+        line-height: 1.0 !important;
+    }
+
+    .hero-desc-bold,
+    .hero-desc-light {
+        line-height: 1.15 !important;
+    }
+
+    .hero-premium-cta {
+        margin-top: 0.5rem !important;
+    }
 }
 
 @media (max-width: 768px) {

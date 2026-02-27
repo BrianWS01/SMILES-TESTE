@@ -4273,36 +4273,44 @@ section h2 {
     background: #20bd5a;
 }
 
-/* Specific Hero Spacing Refinements for Mobile */
+/* Specific Hero Spacing Refinements for Mobile - Ultra-Tight Match */
 @media (max-width: 1023px) {
     .hero-text-centered {
-        gap: 0.5rem !important;
+        gap: 0 !important;
+    }
+
+    .hero-title,
+    .hero-description {
+        margin-top: 0 !important;
     }
 
     .hero-title {
-        margin-top: 0.2rem !important;
-    }
-
-    .hero-description {
-        margin-top: 0.1rem !important;
-    }
-
-    .hero-mt-sm {
-        margin-top: 0.2rem !important;
+        margin-bottom: 5px !important;
     }
 
     .hero-title-lime,
     .hero-title-white {
-        line-height: 1.0 !important;
+        line-height: 0.95 !important;
+        margin-bottom: 2px !important;
+    }
+
+    .hero-description p {
+        margin-top: 0 !important;
+        margin-bottom: 2px !important;
     }
 
     .hero-desc-bold,
     .hero-desc-light {
-        line-height: 1.15 !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero-mt-sm {
+        margin-top: 6px !important;
+        line-height: 1.1 !important;
     }
 
     .hero-premium-cta {
-        margin-top: 0.5rem !important;
+        margin-top: 15px !important;
     }
 }
 

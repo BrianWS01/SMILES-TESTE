@@ -20,6 +20,13 @@ html {
     }
 }
 
+/* Global scale for Mobile/Tablet */
+@media (max-width: 1023px) {
+    html {
+        zoom: 0.9;
+    }
+}
+
 /* Scroll mais suave para toda a página */
 @media (prefers-reduced-motion: no-preference) {
     html {
@@ -476,7 +483,7 @@ header {
 .hero-desc-light {
     color: #ffffff;
     font-family: 'Host Grotesk', sans-serif;
-    line-height: 1.5;
+    line-height: 1.25;
 }
 
 .hero-desc-bold {
@@ -491,7 +498,7 @@ header {
 }
 
 .hero-mt-sm {
-    margin-top: 0.75rem;
+    margin-top: 0.4rem;
 }
 
 .hero-premium-cta {

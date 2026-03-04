@@ -4265,8 +4265,7 @@ section h2 {
 /* Specific Hero Spacing Refinements for Mobile */
 @media (max-width: 1023px) {
     .hero-content {
-        padding: 120px 20px 40px !important;
-        min-height: auto !important;
+        padding: 120px 20px 80px !important;
     }
 
     .hero-text-centered {

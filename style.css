@@ -4270,6 +4270,11 @@ section h2 {
         /* Maior padding lateral geral */
     }
 
+    .hero-location-pill span {
+        font-size: 11px !important;
+        /* Fonte menor na pílula de localização */
+    }
+
     .hero-title {
         margin-bottom: 10px !important;
     }
@@ -4292,6 +4297,10 @@ section h2 {
     .hero-description p {
         margin-top: 5px !important;
         margin-bottom: 5px !important;
+        text-align: justify !important;
+        /* Texto justificado */
+        text-align-last: center !important;
+        /* Última linha centralizada */
     }
 
     .hero-desc-bold,
@@ -4312,6 +4321,13 @@ section h2 {
 
     .hero-premium-cta {
         margin-top: 25px !important;
+        padding: 22px 20px !important;
+        /* Botão mais alto/padding maior */
+    }
+
+    .hero-premium-cta span {
+        font-size: 14px !important;
+        /* Fonte do botão menor */
     }
 }
 

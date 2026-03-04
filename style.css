@@ -20,12 +20,7 @@ html {
     }
 }
 
-/* Global scale for Mobile/Tablet - Reverted to 100% */
-@media (max-width: 1023px) {
-    html {
-        zoom: 1;
-    }
-}
+
 
 /* Scroll mais suave para toda a página */
 @media (prefers-reduced-motion: no-preference) {
@@ -1882,14 +1877,9 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 40px 0 60px;
-    }
-
     .footer-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
-        padding: 0 20px;
     }
 
     .footer-brand {
@@ -2713,7 +2703,6 @@ section h2 {
         grid-template-columns: 1fr;
         gap: 20px;
         max-width: 100%;
-        padding: 0 20px;
     }
 
     .depoimento-card {
@@ -3449,10 +3438,6 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    .sobre {
-        padding: 60px 0;
-    }
-
     .sobre-img-top {
         max-width: 180px;
         top: -50px;
@@ -3463,10 +3448,6 @@ section h2 {
         max-width: 180px;
         bottom: -250px;
         right: -30px;
-    }
-
-    .sobre-wrapper {
-        padding: 40px 20px;
     }
 
     .sobre-header {
@@ -3835,10 +3816,6 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    .etapas {
-        padding: 60px 0;
-    }
-
     .etapas-wrapper {
         gap: 40px;
     }
@@ -3852,7 +3829,6 @@ section h2 {
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        padding: 0 20px;
     }
 
     .etapa-item {
@@ -4087,13 +4063,6 @@ section h2 {
 
 /* Agendamento Responsivo */
 @media (max-width: 768px) {
-    .agendamento {
-        padding: 60px 0;
-    }
-
-    .agendamento-wrapper {
-        padding: 0 20px;
-    }
 
     .agendamento-title {
         font-size: 2.5rem;
@@ -4293,44 +4262,47 @@ section h2 {
     background: #20bd5a;
 }
 
-/* Specific Hero Spacing Refinements for Mobile - Ultra-Tight Match */
+/* Specific Hero Spacing Refinements for Mobile */
 @media (max-width: 1023px) {
     .hero-text-centered {
-        gap: 0 !important;
-    }
-
-    .hero-title,
-    .hero-description {
-        margin-top: 0 !important;
+        gap: 15px !important;
     }
 
     .hero-title {
-        margin-bottom: 5px !important;
+        margin-bottom: 10px !important;
     }
 
     .hero-title-lime,
     .hero-title-white {
-        line-height: 0.95 !important;
-        margin-bottom: 2px !important;
+        font-size: 2.5rem !important;
+        /* Smaller for mobile previously 3rem */
+        line-height: 1.15 !important;
+        /* Restore comfortable line-height */
+        margin-bottom: 5px !important;
+    }
+
+    .hero-description {
+        margin-top: 15px !important;
+        padding: 0 10px;
+        /* Slight padding on mobile edges */
     }
 
     .hero-description p {
-        margin-top: 0 !important;
-        margin-bottom: 2px !important;
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
     }
 
     .hero-desc-bold,
     .hero-desc-light {
-        line-height: 1.1 !important;
-    }
-
-    .hero-mt-sm {
-        margin-top: 6px !important;
-        line-height: 1.1 !important;
+        font-size: 1rem !important;
+        /* Scale down descriptions slightly to 16px */
+        line-height: 1.4 !important;
+        /* Add breathing room for text previously 1.1 */
     }
 
     .hero-premium-cta {
-        margin-top: 15px !important;
+        margin-top: 25px !important;
+        /* Push the button down */
     }
 }
 

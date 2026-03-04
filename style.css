@@ -4333,6 +4333,8 @@ section h2 {
     .hero-premium-cta span {
         font-size: 13px !important;
         /* Fonte do botão menor */
+        white-space: nowrap !important;
+        /* Força tudo em uma linha */
     }
 
     .hero-premium-cta svg {

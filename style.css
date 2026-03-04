@@ -270,7 +270,7 @@ header {
 
 .hamburger span {
     width: 25px;
-    height: 3px;
+    height: 2px;
     background: #166534;
     transition: all 0.3s;
     border-radius: 2px;
@@ -4266,6 +4266,8 @@ section h2 {
 @media (max-width: 1023px) {
     .hero-text-centered {
         gap: 15px !important;
+        padding: 0 20px !important;
+        /* Maior padding lateral geral */
     }
 
     .hero-title {
@@ -4275,16 +4277,16 @@ section h2 {
     .hero-title-lime,
     .hero-title-white {
         font-size: 2.5rem !important;
-        /* Smaller for mobile previously 3rem */
         line-height: 1.15 !important;
-        /* Restore comfortable line-height */
         margin-bottom: 5px !important;
+        font-weight: 300 !important;
+        /* Barras/letras mais finas */
     }
 
     .hero-description {
         margin-top: 15px !important;
-        padding: 0 10px;
-        /* Slight padding on mobile edges */
+        padding: 0 15px !important;
+        /* Maior padding na descrição */
     }
 
     .hero-description p {
@@ -4295,14 +4297,21 @@ section h2 {
     .hero-desc-bold,
     .hero-desc-light {
         font-size: 1rem !important;
-        /* Scale down descriptions slightly to 16px */
         line-height: 1.4 !important;
-        /* Add breathing room for text previously 1.1 */
+    }
+
+    .hero-desc-bold {
+        font-weight: 500 !important;
+        /* Mais fino */
+    }
+
+    .hero-desc-light {
+        font-weight: 300 !important;
+        /* Mais fino */
     }
 
     .hero-premium-cta {
         margin-top: 25px !important;
-        /* Push the button down */
     }
 }
 

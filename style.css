@@ -4327,34 +4327,11 @@ section h2 {
     .hero-premium-cta {
         margin-top: 25px !important;
         padding: 14px 20px !important;
-        background: rgba(0, 0, 0, 0.05) !important;
+        background: linear-gradient(to bottom right, white, #f7fee7) !important;
         border-radius: 16px !important;
         border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
         box-shadow: none !important;
-        position: relative;
-        overflow: hidden;
-        color: white !important;
-        /* Mudar cor de volta pra destacar no hero */
-    }
-
-    .hero-premium-cta::before {
-        content: '';
-        position: absolute;
-        left: 8px;
-        top: 6px;
-        width: calc(100% - 16px);
-        height: calc(100% - 12px);
-        background: #166534;
-        /* Fundo idêntico ao header */
-        border-radius: 10px;
-        border: 0.6px solid rgba(22, 101, 52, 0.9);
-        z-index: -1;
-    }
-
-    .hero-premium-cta span,
-    .hero-premium-cta svg path {
-        position: relative;
-        z-index: 2;
+        color: #404040 !important;
     }
 
     .hero-premium-cta span {
@@ -4365,11 +4342,10 @@ section h2 {
     .hero-premium-cta svg {
         width: 18px !important;
         height: 18px !important;
-        fill: white !important;
     }
 
     .hero-premium-cta svg path {
-        fill: white !important;
+        fill: #404040 !important;
     }
 }
 

@@ -860,3 +860,34 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 
 
+// Modal de Agendamento (Desktop Hero)
+document.addEventListener("DOMContentLoaded", function() {
+    const heroAgendarBtn = document.getElementById("hero-agendar-avalia-btn");
+    const agendamentoModal = document.getElementById("agendamento-modal");
+    const modalCloseBtn = document.getElementById("modal-close-btn");
+
+    if (heroAgendarBtn && agendamentoModal) {
+        heroAgendarBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            agendamentoModal.classList.add("active");
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        });
+    }
+
+    if (modalCloseBtn && agendamentoModal) {
+        modalCloseBtn.addEventListener("click", function() {
+            agendamentoModal.classList.remove("active");
+            document.body.style.overflow = "auto"; // Restore scrolling
+        });
+    }
+
+    // Close on outside click
+    if (agendamentoModal) {
+        agendamentoModal.addEventListener("click", function(e) {
+            if (e.target === agendamentoModal) {
+                agendamentoModal.classList.remove("active");
+                document.body.style.overflow = "auto";
+            }
+        });
+    }
+});

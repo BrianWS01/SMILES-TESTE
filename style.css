@@ -4017,6 +4017,38 @@ section h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.agendamento-phone-text {
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff !important;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15) !important;
+    padding: 16px 28px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    position: relative;
+    z-index: 10;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    display: inline-block;
+}
+
+.agendamento-phone-text:hover {
+    transform: translateY(-2px) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.agendamento-phone-text strong,
+.agendamento-phone-text a {
+    color: #bef264 !important;
+    font-weight: 700;
+}
+
 .agendamento-btn svg {
     flex-shrink: 0;
     width: 28px;
@@ -4088,18 +4120,6 @@ section h2 {
         align-items: center;
         gap: 16px;
         width: 100%;
-    }
-
-    .agendamento-phone-text {
-        font-family: 'Host Grotesk', sans-serif;
-        font-size: 1.1rem;
-        color: #ffffff;
-        margin-bottom: 4px;
-        text-align: center;
-    }
-
-    .agendamento-phone-text strong {
-        color: #d9f99d;
     }
 
     .agendamento-cta-mobile {
@@ -4333,4 +4353,150 @@ section h2 {
         width: 24px;
         height: 24px;
     }
+}
+
+/* CTA Desktop vs Mobile Toggle */
+.desktop-only {
+    display: inline-flex !important;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: inline-flex !important;
+    }
+}
+
+/* Estilos do Modal de Agendamento */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    /* Efeito de vidro fosco no fundo todo */
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Fundo branco e quase opaco, sem depender de variável que possa estar falhando */
+    border-radius: 16px;
+    padding: 32px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--color-gray-500);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--color-black);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    color: var(--color-black);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.modal-header p {
+    font-size: 16px;
+    color: var(--color-gray-600);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark-gray);
+}
+
+.input-group input {
+    padding: 12px 16px;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--color-green-light);
+    box-shadow: 0 0 0 2px rgba(116, 178, 64, 0.2);
+}
+
+.modal-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #166534;
+    /* Dark Green */
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.modal-submit:hover {
+    background-color: #14532d;
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! | Smillens</title>
+    <!-- Redirect to index after 5 seconds -->
+    <!-- FormSubmit sends the user OUT to their servers, so a relative meta refresh on the destination page works -->
+    <meta http-equiv="refresh" content="5;url=https://brianws01.github.io/SMILES-TESTE/">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --color-green-dark: #166534;
+            --color-green: #325142;
+            --color-green-light: #bef264;
+            --color-white: #ffffff;
+            --color-black: #404040;
+            --color-gray-100: #f4f4f5;
+            --color-gray-600: #52525b;
+        }
+
+        body {
+            font-family: 'Host Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-green);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .thank-you-container {
+            background-color: var(--color-white);
+            border-radius: 24px;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            color: var(--color-black);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background-color: #f7fee7;
+            /* very light lime */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 2px solid var(--color-green-light);
+        }
+
+        .icon-circle svg {
+            width: 40px;
+            height: 40px;
+            color: var(--color-green-dark);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0 0 15px;
+            color: var(--color-green-dark);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--color-gray-600);
+            line-height: 1.5;
+            margin: 0 0 25px;
+        }
+
+        .redirect-text {
+            font-size: 14px;
+            color: #a1a1aa;
+            margin-top: 30px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--color-green-dark);
+            color: var(--color-white);
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #14532d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thank-you-container">
+        <div class="icon-circle">
+            <!-- Check Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <h1>Agendamento Recebido!</h1>
+        <p>Muito obrigado pelos seus dados! Nossa equipe já recebeu sua solicitação e entrará em contato em breve no seu
+            WhatsApp.</p>
+
+        <a href="index.html" class="btn-back">Voltar para o site</a>
+
+        <div class="redirect-text">
+            Você será redirecionado para a página inicial em 5 segundos...
+        </div>
+    </div>
+</body>
+
+</html>

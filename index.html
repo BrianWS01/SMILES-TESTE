@@ -16,9 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site moderno e responsivo">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Content-Security-Policy"
-        content="frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'self'">
+        content="frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com; child-src https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com;">
     <title>Smillens - Lentes de Contato Dental sem Desgaste | Barra da Tijuca, RJ</title>
     <link rel="icon" type="image/png" sizes="512x512" href="IMG/favicon-512x512.png">
     <link rel="icon" type="image/png" sizes="192x192" href="IMG/favicon-512x512.png">
@@ -650,8 +649,8 @@
 
         <!-- Sobre Section -->
         <section id="sobre" class="sobre">
-            <img src="IMG/sobre/chatgpt-image-8-de-out.-de-2025-22_55_28-2.png" alt="" class="sobre-img-top">
-            <img src="IMG/sobre/chatgpt-image-8-de-out.-de-2025-22_55_28-1.png" alt="" class="sobre-img-bottom">
+            <img src="IMG/sobre/chatgpt-image-8-de-out.-de-2025-225528-2.png" alt="" class="sobre-img-top">
+            <img src="IMG/sobre/chatgpt-image-8-de-out.-de-2025-225528-1.png" alt="" class="sobre-img-bottom">
             <div class="container sobre-wrapper">
                 <div class="sobre-header">
                     <div class="sobre-location">
@@ -879,15 +878,7 @@
                         autoestima.<br />Descubra o que a odontologia do futuro pode fazer por você.</p>
                 </div>
 
-                <form class="agendamento-form" id="agendamento-form-footer"
-                    action="https://formsubmit.co/turbinagrupoirio@gmail.com" method="POST">
-                    <!-- Configurações ocultas do FormSubmit -->
-                    <input type="hidden" name="_subject" value="Novo Agendamento Pelo Site (Rodapé)!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <!-- URL for production -->
-                    <input type="hidden" name="_next" value="https://brianws01.github.io/SMILES-TESTE/obrigado.html">
-
+                <form class="agendamento-form" id="agendamento-form-footer">
                     <div class="form-group">
                         <label for="nome-completo-footer">Nome completo *</label>
                         <input type="text" id="nome-completo-footer" name="nome" placeholder="Digite seu nome" required>
@@ -1048,24 +1039,15 @@
                 <p>Deixe seus dados e nossa equipe entrará em contato com você em breve.</p>
             </div>
 
-            <!-- Integrando com FormSubmit -->
-            <form id="agendamento-form" class="modal-form" action="https://formsubmit.co/turbinagrupoirio@gmail.com"
-                method="POST">
-                <!-- Configurações ocultas do FormSubmit -->
-                <input type="hidden" name="_subject" value="Novo Agendamento Pelo Site!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <!-- URL for production -->
-                <input type="hidden" name="_next" value="https://brianws01.github.io/SMILES-TESTE/obrigado.html">
-                <!-- Optional: Redirect URL after submission -->
-
+            <!-- Integrando com Google Sheets API -->
+            <form id="agendamento-form" class="modal-form">
                 <div class="input-group">
-                    <label for="nome">Nome completo</label>
+                    <label for="nome">Nome completo *</label>
                     <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                 </div>
 
                 <div class="input-group">
-                    <label for="whatsapp">WhatsApp</label>
+                    <label for="whatsapp">WhatsApp *</label>
                     <input type="tel" id="whatsapp" name="whatsapp" placeholder="(21) 9 9999-9999" required>
                 </div>
 

@@ -203,26 +203,7 @@ function smoothScrollTo(targetPosition, duration) {
     requestAnimationFrame(animation);
 }
 
-// Form submission
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-
-        // Here you would normally send the data to a server
-        console.log('Form submitted:', data);
-
-        // Show success message
-        alert('Mensagem enviada com sucesso!');
-
-        // Reset form
-        contactForm.reset();
-    });
-}
 
 // Add scroll animation
 const observerOptions = {
@@ -511,11 +492,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextBtn = document.querySelector('.carousel-nav.next-btn');
 
     if (!container || allCards.length === 0) {
-        console.log('Carrossel não encontrado');
         return;
     }
-
-    console.log('Cards encontrados:', allCards.length);
 
     const cards = Array.from(allCards);
     let currentIndex = Math.floor(cards.length / 2);
@@ -626,7 +604,7 @@ document.addEventListener('DOMContentLoaded', function () {
         video.playsInline = true;
         video.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:17px;z-index:100;background:#000;';
         card.appendChild(video);
-        video.play().catch(e => console.log('Erro ao reproduzir:', e));
+        video.play().catch(e => { });
     }
 
     // Event listeners para navegação
@@ -686,7 +664,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Inicializar
     positionCards();
-    console.log('Carrossel inicializado com', cards.length, 'cards');
 });
 
 // Carrossel da Equipe
@@ -861,13 +838,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Modal de Agendamento (Desktop Hero)
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const heroAgendarBtn = document.getElementById("hero-agendar-avalia-btn");
     const agendamentoModal = document.getElementById("agendamento-modal");
     const modalCloseBtn = document.getElementById("modal-close-btn");
 
     if (heroAgendarBtn && agendamentoModal) {
-        heroAgendarBtn.addEventListener("click", function(e) {
+        heroAgendarBtn.addEventListener("click", function (e) {
             e.preventDefault();
             agendamentoModal.classList.add("active");
             document.body.style.overflow = "hidden"; // Prevent scrolling
@@ -875,7 +852,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (modalCloseBtn && agendamentoModal) {
-        modalCloseBtn.addEventListener("click", function() {
+        modalCloseBtn.addEventListener("click", function () {
             agendamentoModal.classList.remove("active");
             document.body.style.overflow = "auto"; // Restore scrolling
         });
@@ -883,11 +860,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Close on outside click
     if (agendamentoModal) {
-        agendamentoModal.addEventListener("click", function(e) {
+        agendamentoModal.addEventListener("click", function (e) {
             if (e.target === agendamentoModal) {
                 agendamentoModal.classList.remove("active");
                 document.body.style.overflow = "auto";
             }
         });
     }
+});
+
+// Integração com Google Sheets API
+document.addEventListener("DOMContentLoaded", function () {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby5-0x78bZmcgXsHWYO8hc3dp9QcNw6rAS2c6kfMcZhI0uMYTt5j3yjyvjfAorgY-EH/exec';
+
+    // Capturar ambos os formulários (Modal Desktop e o Rodapé)
+    const forms = [
+        document.getElementById('agendamento-form'),
+        document.getElementById('agendamento-form-footer')
+    ];
+
+    forms.forEach(form => {
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+
+                // Pegar botão submit e mudar texto para carregando
+                const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('.modal-submit');
+                let originalText = "Agendar";
+                if (submitBtn) {
+                    originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = 'Enviando...';
+                    submitBtn.disabled = true;
+                }
+
+                // Extrair dados
+                const formData = new FormData(form);
+                const dataObj = Object.fromEntries(formData.entries());
+
+                // Enviar usando Fetch API com keepalive para rodar em segundo plano
+                fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors', // O CORS bloqueia resposta do Apps Script para navegadores, 'no-cors' envia oculto e não lê a resposta.
+                    keepalive: true, // Garante que o envio continue mesmo se o usuário sair da página
+                    headers: {
+                        'Content-Type': 'text/plain;charset=utf-8' // Formato que o Apps Script lê cru
+                    },
+                    body: JSON.stringify(dataObj)
+                }).catch(error => {
+                    console.error('Erro silencioso no background:', error);
+                });
+
+                // Redirecionar IMEDIATAMENTE sem esperar os 2 segundos do Google Sheets
+                window.location.href = 'obrigado.html';
+            });
+
+        }
+    });
 });

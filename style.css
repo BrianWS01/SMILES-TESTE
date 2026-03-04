@@ -4321,13 +4321,18 @@ section h2 {
 
     .hero-premium-cta {
         margin-top: 25px !important;
-        padding: 22px 20px !important;
-        /* Botão mais alto/padding maior */
+        padding: 10px 20px !important;
+        /* Reduzido para deixar mais fino */
     }
 
     .hero-premium-cta span {
-        font-size: 14px !important;
+        font-size: 13px !important;
         /* Fonte do botão menor */
+    }
+
+    .hero-premium-cta svg {
+        width: 18px !important;
+        height: 18px !important;
     }
 }
 

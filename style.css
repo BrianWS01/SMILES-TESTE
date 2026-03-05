@@ -1713,7 +1713,7 @@ section h2 {
 /* ==================== FOOTER ==================== */
 .footer {
     background: #ffffff;
-    padding: 60px 0 80px;
+    padding: 20px 0 80px;
 }
 
 .footer-wrapper {
@@ -2386,11 +2386,11 @@ section h2 {
     }
 
     .prova-social {
-        padding: 60px 0;
+        padding: 20px 0 60px;
     }
 
     .prova-social-wrapper {
-        padding: 40px 20px;
+        padding: 10px 20px 40px;
         gap: 40px;
     }
 
@@ -2888,7 +2888,7 @@ section h2 {
 /* Sobre Section */
 .sobre {
     background: #ffffff;
-    padding: 60px 0 20px;
+    padding: 60px 0 0px;
     position: relative;
     overflow: hidden;
 }
@@ -3195,7 +3195,7 @@ section h2 {
 .equipe-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 20px 20px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3508,7 +3508,7 @@ section h2 {
     }
 
     .sobre-gallery {
-        margin: 40px auto 0;
+        margin: 20px auto 0;
         padding: 20px;
         border-radius: 30px;
         gap: 15px;
@@ -3545,11 +3545,11 @@ section h2 {
 
 /* Equipe Mobile */
 .equipe {
-    padding: 60px 0;
+    padding: 0px 0;
 }
 
 .equipe-wrapper {
-    padding: 40px 20px;
+    padding: 10px 20px 40px;
     gap: 2rem;
 }
 
@@ -3871,7 +3871,7 @@ section h2 {
 /* ==================== SEÇÃO AGENDAMENTO ==================== */
 .agendamento {
     background: linear-gradient(135deg, #1a3d2e 0%, #0f2a1f 50%, #0a1f16 100%);
-    padding: 100px 0;
+    padding: 100px 0 20px;
     position: relative;
 }
 

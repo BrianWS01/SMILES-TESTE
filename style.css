@@ -716,7 +716,7 @@ header {
 
 /* Sections */
 section {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 section h2 {
@@ -933,14 +933,14 @@ section h2 {
 /* Prova Social Section */
 .prova-social {
     background: #ffffff;
-    padding: 80px 0 100px;
+    padding: 0px 0 100px;
     overflow: hidden;
 }
 
 .prova-social-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2888,7 +2888,7 @@ section h2 {
 /* Sobre Section */
 .sobre {
     background: #ffffff;
-    padding: 80px 0;
+    padding: 60px 0 20px;
     position: relative;
     overflow: hidden;
 }
@@ -3538,88 +3538,87 @@ section h2 {
         flex-shrink: 0;
     }
 
-    .sobre-gallery-item-5,
     .sobre-gallery-item-6 {
         display: none;
     }
+}
 
-    /* Equipe Mobile */
-    .equipe {
-        padding: 60px 0;
-    }
+/* Equipe Mobile */
+.equipe {
+    padding: 60px 0;
+}
 
-    .equipe-wrapper {
-        padding: 40px 20px;
-        gap: 2rem;
-    }
+.equipe-wrapper {
+    padding: 40px 20px;
+    gap: 2rem;
+}
 
-    .equipe-title-green,
-    .equipe-title-green-light {
-        font-size: 2.5rem;
-        line-height: 48px;
-    }
+.equipe-title-green,
+.equipe-title-green-light {
+    font-size: 2.5rem;
+    line-height: 48px;
+}
 
-    .equipe-description {
-        font-size: 1rem;
-    }
+.equipe-description {
+    font-size: 1rem;
+}
 
-    .equipe-carousel-wrapper {
-        padding: 10px 50px;
-        margin: 0 auto;
-        overflow: hidden;
-        width: 100%;
-        box-sizing: border-box;
-    }
+.equipe-carousel-wrapper {
+    padding: 10px 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    .equipe-carousel {
-        gap: 20px;
-        padding: 10px 0;
-    }
+.equipe-carousel {
+    gap: 20px;
+    padding: 10px 0;
+}
 
-    .equipe-card {
-        flex: 0 0 280px;
-        min-width: 280px;
-        max-width: 280px;
-        box-sizing: border-box;
-    }
+.equipe-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 280px;
+    box-sizing: border-box;
+}
 
-    .equipe-card-img {
-        width: 100%;
-        height: 280px;
-    }
+.equipe-card-img {
+    width: 100%;
+    height: 280px;
+}
 
-    .equipe-card-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.equipe-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .equipe-carousel-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
-        z-index: 10;
-    }
+.equipe-carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    z-index: 10;
+}
 
-    .equipe-prev {
-        left: 8px;
-    }
+.equipe-prev {
+    left: 8px;
+}
 
-    .equipe-next {
-        right: 8px;
-    }
+.equipe-next {
+    right: 8px;
+}
 
-    .equipe-card-info {
-        padding: 16px;
-    }
+.equipe-card-info {
+    padding: 16px;
+}
 
-    .equipe-card-info h3 {
-        font-size: 1.1rem;
-    }
+.equipe-card-info h3 {
+    font-size: 1.1rem;
+}
 
-    .equipe-card-info span {
-        font-size: 0.85rem;
-    }
+.equipe-card-info span {
+    font-size: 0.85rem;
 }
 
 /* ==================== SEÇÃO ETAPAS ==================== */

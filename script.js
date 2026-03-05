@@ -716,7 +716,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updatePills() {
+        const maxIndex = getMaxIndex();
         pills.forEach((pill, index) => {
+            if (index > maxIndex) {
+                pill.style.display = 'none';
+            } else {
+                pill.style.display = '';
+            }
+
             if (index === currentIndex) {
                 pill.classList.add('active');
             } else {
